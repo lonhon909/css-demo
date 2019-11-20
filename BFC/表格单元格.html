@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>表格单元格</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .app {
+      height: 200px;
+      border: 1px solid blue;
+    }
+    .box {
+      margin: 20px;
+      height: 100px;
+      width: 100px;
+      background-color: bisque;
+      /* display: table-cell; 表格单元格 BFC 块级格式化上下文 */
+      /* display: table-caption; */
+      display: table;
+    }
+    .a1 {
+      margin: 20px;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="box">
+      <div class="a1">2</div>
+    </div>
+  </div>
+</body>
+</html>

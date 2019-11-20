@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+
+    .container {
+      /* animation: 1s haha; */
+      /* animation: 1s haha ease-out; */
+      /* animation: 1s haha ease-out 800ms; */
+      /* animation: 1s haha ease-out 800ms 2; */
+      /* animation: 1s haha ease-in-out 1s 3 alternate; */
+      animation: 1s haha ease-in-out 3s 3 alternate both;
+    }
+    /* .container:hover {
+      animation-play-state: paused;
+    } */
+    @keyframes haha {
+      0% {
+        width: 200px;
+        height: 10px;
+        background-color: aliceblue;
+      }
+      50%  {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+      100% {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+
+  <script>
+    document.getElementsByClassName('container')[0].addEventListener('click', function(e) {
+      e.target.style.animationPlayState = 'paused';
+    })
+  </script>
+</body>
+</html>

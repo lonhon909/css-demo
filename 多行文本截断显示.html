@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: white;
+} */
+
+.button {
+	position: relative;
+	appearance: none;
+	background: #f72359;
+	padding: 1em 2em;
+	border: none;
+	color: white;
+	font-size: 1.2em;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	border-radius: 100px;
+	
+}
+.button span {
+		position: relative;
+		pointer-events: none;
+	}
+	
+	.button::before {
+		--size: 0;
+
+		content: '';
+		position: absolute;
+		left: var(--x);
+		top: var(--y);
+		width: var(--size);
+		height: var(--size);
+		background: radial-gradient(circle closest-side, #4405f7, transparent);
+		transform: translate(-50%, -50%);
+		transition: width .2s ease, height .2s ease;
+	}
+	
+	.button:hover::before {
+		--size: 400px;
+	}
+  .pretty-text-underline {
+  display: inline;
+  text-shadow: 1px 1px #f5f6f9, -1px 1px #f5f6f9, -1px -1px #f5f6f9, 1px -1px #f5f6f9;
+  background-image: linear-gradient(90deg, currentColor 100%, transparent 100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+.pretty-text-underline::-moz-selection {
+  background-color: rgba(0, 150, 255, 0.3);
+  text-shadow: none;
+}
+.pretty-text-underline::selection {
+  background-color: rgba(0, 150, 255, 0.3);
+  text-shadow: none;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+  </style>
+</head>
+<body>
+    <button class="button">
+        <span>Hover me I'm awesome</span>
+      </button>
+      <p class="pretty-text-underline">Pretty text underline without clipping descending letters.</p>
+      <br/>
+      <p class="hover-underline-animation">Hover this text to see the effect!</p>
+
+</body>
+</html>
