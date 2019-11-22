@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      margin: 30px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .container {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      margin: 20px;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 10px 0px #000;
+      border-radius: 10px;
+    }
+
+    .item {
+      display: block;
+      width: 21px;
+      height: 21px;
+      border-radius: 50%;
+      background-color: #000000;
+    }
+
+    .flex1 {
+      display: flex;
+    }
+
+    .flex2 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .flex3 {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .flex4 {
+      display: flex;
+      align-items: center;
+    }
+
+    .flex5 {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .flex6 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .flex7 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .flex8 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .flex9 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .flex10 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .flex11 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .flex11::after {
+      /* 设置棋子大小 */
+      content: '';
+      width: 15px;
+      height: 15px;
+    }
+
+    .flex11 .item:nth-child(2) {
+      align-self: center;
+    }
+
+    .flex12 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .flex12 .item:nth-child(2) {
+      align-self: flex-end;
+    }
+
+    .flex13 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .flex13 .item:nth-child(2) {
+      align-self: center;
+    }
+
+    .flex13 .item:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    .flex14 {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    .flex15 {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    .flex16 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    .flex17 {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    .flex17 .item:nth-child(5) {
+      align-self: center;
+    }
+
+    .flex18 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="container flex1">
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex2">
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex3">
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex4">
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex5">
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex6">
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex7">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex8">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex9">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex10">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex11">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex12">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex13">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex14">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex15">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex16">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex17">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+
+    <div class="container flex18">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+  </div>
+</body>
+
+</html>
