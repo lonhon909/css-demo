@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .grid-container {
+      display: grid;
+      width: 300px;
+      height: 400px;
+      /* grid-template-rows: 100px 100px 150px;
+      grid-template-columns: 20px 100px 200px; */
+      /* grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-template-rows: 33.33% 33.33% 33.33%; */
+      /* grid-template-columns: repeat(3, 33.33%); */
+      /* grid-template-columns: 2fr 1fr minmax(100px, 1fr); */
+      grid-template-columns: 100px auto 10px;
+
+      /* grid-template-rows: repeat(4, 25%); */
+      grid-template-rows: repeat(auto-fill, 20px);
+      grid-row-gap: 10px;
+      grid-column-gap: 10px;
+      gap: 1px 1px;
+      grid-auto-flow: column;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+  </div>
+</body>
+</html>
