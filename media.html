@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    html {
+      font-size: 50px;
+    }
+    @media only screen and (min-width: 320px) {
+      html {
+        font-size: 50px;
+      }
+    }
+    p {
+      font-size: 12px;
+    }
+    /* @media screen and (min-width: 361px) and (max-width: 414px) {
+      html {
+        font-size: 57px;
+      }
+    }
+    @media screen and (min-width: 415px) {
+      html {
+        font-size: 65px;
+      }
+    } */
+  </style>
+</head>
+<body>
+<p>一行文字</p>
+<script>
+  const a = {}
+const b = Symbol('1')
+const c = Symbol('1')
+a[b] = '子君'
+a[c] = '君子'
+
+// 我是子君还是君子呢
+console.log(a[b])
+
+const d = {}
+const e = {key: '1'}
+const f = {key: '2'}
+d[e] = '子君'
+d[f] = '君子'
+
+// 我是子君还是君子呢
+console.log(d[e])
+
+</script>
+</body>
+</html>
