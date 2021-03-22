@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    html, body {width: 100%; height: 100%;}
+    .box1 {width: 300px;background-color: antiquewhite;}
+    /* 但行文本 */
+    .p1 {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+    /* 多行文本 */
+    .p2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <!-- display: inline-block 可以将最后整个快变为... -->
+    <p class="p1"><span>超出文本长度对于</span>超出文<span style="display: inline-block;">超出文本长度对于超出文本长度</span></p>
+  </div>
+  <br>
+  <div class="box1">
+    <p class="p2">span超出文本长度对于超出文本长度对于超出文本长度对于超出文本长度span超出文本长度对于超出文本长度对于超出文本长度对于超出文本长度</p>
+  </div>
+
+  <script>
+    "use strict"
+    function tailFactorial(n, total) {
+      if (n === 1) return total;
+      return tailFactorial(n - 1, n * total);
+    }
+    alert(tailFactorial(20000, 1))
+  </script>
+</body>
+</html>
